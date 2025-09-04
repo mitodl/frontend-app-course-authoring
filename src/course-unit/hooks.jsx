@@ -35,7 +35,6 @@ import {
   getSavingStatus,
   getSequenceStatus,
   getStaticFileNotices,
-  getLoadingStatuses,
 } from './data/selectors';
 import {
   changeEditTitleFormOpen,
@@ -52,7 +51,6 @@ export const useCourseUnit = ({ courseId, blockId }) => {
   const [isMoveModalOpen, openMoveModal, closeMoveModal] = useToggle(false);
 
   const courseUnit = useSelector(getCourseUnitData);
-  const courseUnitLoadingStatus = useSelector(getLoadingStatuses);
   const savingStatus = useSelector(getSavingStatus);
   const isLoading = useSelector(getIsLoading);
   const errorMessage = useSelector(getErrorMessage);
@@ -238,7 +236,6 @@ export const useCourseUnit = ({ courseId, blockId }) => {
   return {
     sequenceId,
     courseUnit,
-    courseUnitLoadingStatus,
     unitTitle,
     unitCategory,
     errorMessage,
