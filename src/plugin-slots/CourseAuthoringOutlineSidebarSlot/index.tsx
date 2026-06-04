@@ -7,7 +7,8 @@ export const CourseAuthoringOutlineSidebarSlot = ({
   courseName,
   sections,
 }: CourseAuthoringOutlineSidebarSlotProps) => (
-  <div>
+  <div className="align-self-stretch" // Stretch to the full height of the outline so the sticky sidebar can follow scrolling
+  >
     <PluginSlot
       id="org.openedx.frontend.authoring.course_outline_sidebar.v1"
       idAliases={['course_authoring_outline_sidebar_slot']}
